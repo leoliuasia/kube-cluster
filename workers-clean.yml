@@ -1,0 +1,7 @@
+- hosts: workers
+  tasks:
+    - name: clean the node_joined.txt
+      file:
+        path: $HOME/node_joined.txt
+        state: absent
+

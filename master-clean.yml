@@ -1,0 +1,11 @@
+- hosts: master
+  tasks:
+    - name: clean the cluster_initialized.txt file
+      file:
+        path: $HOME/cluster_initialized.txt
+        state: absent
+    - name: clean the pod_network_setup.txt
+      file:
+        path: /home/ubuntu/pod_network_setup.txt
+        state: absent
+
